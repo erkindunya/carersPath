@@ -1,0 +1,103 @@
+body {
+  font-size: 10px;
+  font-family: Arial, Helvetica, sans-serif; }
+
+.flex-even {
+  flex: 1; }
+
+header {
+  margin-top: 3em;
+  margin-bottom: 6em; }
+  header a {
+    font-size: 1.4em;
+    color: #4D4D4D;
+    font-weight: bold;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    line-height: 3.5em; }
+  header .search input {
+    border: 1px solid #4D4D4D;
+    box-shadow: none;
+    padding: 1em;
+    font-size: 1.4em; }
+
+h1 {
+  font-size: 4em;
+  color: #00263A;
+  font-weight: bold; }
+
+.subtitle {
+  font-size: 1.8em;
+  color: #008195; }
+
+p {
+  font-size: 1.4em;
+  color: #4D4D4D; }
+
+.light-banner {
+  background-color: #008195;
+  padding: 5em 0;
+  margin-top: 5em; }
+  .light-banner h2 {
+    color: #ffffff;
+    font-weight: bold;
+    text-align: center;
+    font-size: 2.5em; }
+  .light-banner .row {
+    padding-top: 2em;
+    padding-bottom: 2em; }
+
+.dark-banner {
+  background-color: #00263A; }
+  .dark-banner p {
+    color: #ffffff; }
+  .dark-banner h3 {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 2.5em; }
+
+.explore-our-stories {
+  padding-right: 7em;
+  padding-top: 5em; }
+
+.pathway-box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  margin: 2em;
+  margin-top: 7.5em; }
+  .pathway-box .pathway-box-image {
+    display: block;
+    position: absolute;
+    margin: 0 auto;
+    top: -7.5em;
+    left: 0;
+    right: 0; }
+  .pathway-box h3 {
+    margin-top: 4em;
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #008195; }
+  .pathway-box .btn-secondary {
+    border-color: #00263A;
+    background-color: #ffffff;
+    color: #00263A;
+    border-radius: 2em;
+    font-weight: bold;
+    font-size: 1.8em;
+    padding: 0 2em; }
+    .pathway-box .btn-secondary:hover {
+      color: #ffffff;
+      background-color: #00263A; }
+  .pathway-box .btn-primary {
+    border-color: #E40520;
+    background-color: #ffffff;
+    color: #E40520;
+    border-radius: 2em;
+    font-weight: bold;
+    font-size: 1.8em;
+    padding: 0 0.5em; }
+    .pathway-box .btn-primary:hover {
+      color: #ffffff;
+      background-color: #E40520; }

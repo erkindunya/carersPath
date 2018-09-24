@@ -1,0 +1,19 @@
+{
+  "name": "careerpathways",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "start": "parcel index.html"
+  },
+  "author": "",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "node-sass": "^4.9.3",
+    "parceljs": "0.0.1",
+    "typescript": "^3.0.3"
+  },
+  "dependencies": {
+    "bootstrap": "^4.1.3"
+  }
+}
