@@ -10654,25 +10654,7 @@ if ( !noGlobal ) {
 return jQuery;
 } );
 
-},{"process":32}],24:[function(require,module,exports) {
-"use strict";
-
-var __importDefault = this && this.__importDefault || function (mod) {
-    return mod && mod.__esModule ? mod : { "default": mod };
-};
-exports.__esModule = true;
-var jquery_1 = __importDefault(require("jquery"));
-jquery_1["default"]('.js-toggle-subnav').click(function (event) {
-    event.preventDefault();
-    jquery_1["default"](this).toggleClass('active');
-    jquery_1["default"]('.subnav').slideToggle();
-});
-jquery_1["default"]('.js-close-subnav').click(function (event) {
-    event.preventDefault();
-    jquery_1["default"]('.js-toggle-subnav').removeClass('active');
-    jquery_1["default"]('.subnav').slideUp();
-});
-},{"jquery":26}],40:[function(require,module,exports) {
+},{"process":32}],34:[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 
@@ -10842,5 +10824,5 @@ function hmrAccept(bundle, id) {
     return hmrAccept(global.parcelRequire, id);
   });
 }
-},{}]},{},[40,24], null)
-//# sourceMappingURL=/main.aa1b1767.map
+},{}]},{},[34,26], null)
+//# sourceMappingURL=/jquery.efa2a4ee.map

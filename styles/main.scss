@@ -74,16 +74,15 @@ header {
   margin-top: 3em;
   margin-bottom: 6em;
 
-  a {
+  .header a {
     position: relative;
     font-size: 1.4em;
     color: $grey;
     font-weight: bold;
-    margin-top: 1em;
-    margin-bottom: 1em;
     line-height: 3.5em;
     display: inline-block;
-    padding: 0 1.8em;
+    padding: 1em 1.8em;
+    padding-bottom: 0.1em;
     transition-duration: 0.15s;
 
     &.active {
@@ -147,11 +146,6 @@ header {
       padding-bottom: 0.3em;
     }
   }
-}
-
-.sub-nav {
-  background-color: $dark-blue;
-  display: none;
 }
 
 .light-banner {
@@ -247,5 +241,31 @@ header {
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
+  }
+}
+
+.subnav {
+  background-color: $dark-blue;
+  padding-top: 5em;
+  padding-bottom: 3em;
+  display: none;
+
+  a {
+    color: $light-blue;
+    font-size: 1.8em;
+    font-weight: bold;
+    &:hover {
+      color: $white;
+      text-decoration: none;
+    }
+
+    &.close-subnav {
+      color: $red;
+      font-size: 1.2em;
+      &::after {
+        content: url('../images/close-up-arrow.png'); // causes error with parcel compiler, not sure why, still runs
+        margin-left: 0.5em;
+      }
+    }
   }
 }
