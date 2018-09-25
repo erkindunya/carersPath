@@ -1,140 +1,251 @@
-$dark-blue: #00263A;
+$dark-blue: #00263a;
 $light-blue: #008195;
-$grey: #4D4D4D;
+$grey: #4d4d4d;
 $white: #ffffff;
-$red: #E40520;
+$red: #e40520;
 
 body {
-    font-size: 10px;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.flex-even {
-    flex: 1;
-}
-
-header {
-    margin-top: 3em;
-    margin-bottom: 6em;
-
-    a {
-        font-size: 1.4em;
-        color: $grey;
-        font-weight: bold;
-        margin-top: 1em;
-        margin-bottom: 1em;
-        line-height: 3.5em;
-    }
-
-    .search {
-        input {
-            border: 1px solid $grey;
-            box-shadow: none;
-            padding: 1em;
-            font-size: 1.4em;
-        }
-    }
+  font-size: 10px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 h1 {
-    font-size: 4em;
-    color: $dark-blue;
-    font-weight: bold;
+  font-size: 4em;
+  font-weight: bold;
+  color: $dark-blue;
 }
 
-.subtitle {
-    font-size: 1.8em;
-    color: $light-blue;
+h2 {
+  font-size: 2.8em;
+  font-weight: bold;
+  color: $dark-blue;
+}
+
+h3 {
+  font-size: 2.4em;
+  font-weight: bold;
+  color: $dark-blue;
+}
+
+h4 {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: $dark-blue;
 }
 
 p {
+  font-size: 1.4em;
+  color: $grey;
+}
+
+img {
+  max-width: 100%;
+}
+
+// re-usable
+
+.subtitle {
+  font-size: 1.8em;
+  color: $light-blue;
+}
+
+.flex-even {
+  flex: 1;
+}
+
+.btn-rounded {
+  border-color: $dark-blue;
+  background-color: $white;
+  color: $dark-blue;
+  border-radius: 2em;
+  font-weight: bold;
+  font-size: 1.8em;
+  padding: 0 2.6em;
+
+  &:hover {
+    color: $white;
+    background-color: $dark-blue;
+  }
+}
+
+// specific
+
+header {
+  margin-top: 3em;
+  margin-bottom: 6em;
+
+  a {
+    position: relative;
     font-size: 1.4em;
     color: $grey;
+    font-weight: bold;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    line-height: 3.5em;
+    display: inline-block;
+    padding: 0 1.8em;
+    transition-duration: 0.15s;
+
+    &.active {
+      background-color: $dark-blue;
+      color: #fff;
+    }
+
+    &:not(.active) {
+      &:after {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        width: 80%;
+        height: 4px;
+        background: rgba($light-blue, 0.1);
+        content: "";
+        opacity: 0;
+        -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+        -moz-transition: opacity 0.3s, -moz-transform 0.3s;
+        transition: opacity 0.3s, transform 0.3s;
+        -webkit-transform: translateY(10px);
+        -moz-transform: translateY(10px);
+        transform: translateY(10px) translateX(-50%);
+      }
+
+      &:hover {
+        color: $grey;
+        text-decoration: none;
+
+        &:after {
+          opacity: 1;
+          background: rgba($light-blue, 1);
+          transform: translateY(0px) translateX(-50%);
+        }
+      }
+    }
+  }
+
+  .search {
+    display: inline-block;
+    margin-left: 1em;
+    border: 1px solid $grey;
+
+    input {
+      border: none;
+      outline: none;
+      box-shadow: none;
+      padding: 1em;
+      font-size: 1.4em;
+      width: 230px;
+    }
+
+    button {
+      border: none;
+      height: 3em;
+    }
+
+    img {
+      width: 2.6em;
+      margin-right: 1em;
+      padding-bottom: 0.3em;
+    }
+  }
+}
+
+.sub-nav {
+  background-color: $dark-blue;
+  display: none;
 }
 
 .light-banner {
-    background-color: $light-blue;
-    padding: 5em 0;
-    margin-top: 5em;
-    h2 {
-        color: $white;
-        font-weight: bold;
-        text-align: center;
-        font-size: 2.5em;
-    }
-    .row {
-        padding-top: 2em;
-        padding-bottom: 2em;
-    }
+  position: relative;
+  background-color: $light-blue;
+  padding: 5em 0;
+  margin-top: 6em;
+
+  h2 {
+    color: $white;
+    text-align: center;
+    margin-bottom: 1.5em;
+  }
+
+  .row {
+    padding-top: 2em;
+    padding-bottom: 2em;
+  }
 }
 
 .dark-banner {
-    background-color: $dark-blue;
+  background-color: $dark-blue;
 
-    p {
-        color: $white;
-    }
-    h3 {
-        color: $white;
-        font-weight: bold;
-        font-size: 2.5em;
-    }
-
+  p {
+    color: $white;
+  }
+  h3 {
+    color: $white;
+  }
 }
 
 .explore-our-stories {
-    padding-right: 7em;
-    padding-top: 5em;
+  padding-right: 7em;
+  padding-top: 5em;
 }
 
 .pathway-box {
-    position: relative;
-    display: flex;
-    flex-direction: column;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: $white;
+  margin: 2em;
+  margin-top: 7.5em;
+  padding: 0 3em !important;
+
+  .pathway-box-image {
+    display: block;
+    position: absolute;
+    margin: 0 auto;
+    top: -7.5em;
+    left: 0;
+    right: 0;
+  }
+
+  h3 {
+    margin-top: 4em;
+    margin-bottom: 0.7em;
+    color: $light-blue;
+  }
+
+  .btn-primary {
+    border-color: $red;
     background-color: $white;
-    margin: 2em;
-    margin-top: 7.5em;
-    .pathway-box-image {
-        display: block;
-        position: absolute;
-        margin: 0 auto;
-        top: -7.5em;
-        left: 0;
-        right: 0;
+    color: $red;
+    border-radius: 2em;
+    font-weight: bold;
+    font-size: 1.8em;
+    padding: 0 0.5em;
+    &:hover {
+      color: $white;
+      background-color: $red;
     }
+  }
+}
 
-    h3 {
-        margin-top: 4em;
-        font-size: 2.5em;
-        font-weight: bold;
-        color: $light-blue;
-    }
+.arrow {
+  position: absolute;
+  top: 0;
+  width: 5em;
+  height: 5em;
+  border-radius: 50%;
+  background-color: #fff;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  text-align: center;
 
-    .btn-secondary {
-        border-color: $dark-blue;
-        background-color: $white;
-        color: $dark-blue;
-        border-radius: 2em;
-        font-weight: bold;
-        font-size: 1.8em;
-        padding: 0 2em;
-        &:hover {
-            color: $white;
-            background-color: $dark-blue;
-        }
-    }
-
-    .btn-primary {
-        border-color: $red;
-        background-color: $white;
-        color: $red;
-        border-radius: 2em;
-        font-weight: bold;
-        font-size: 1.8em;
-        padding: 0 0.5em;
-        &:hover {
-            color: $white;
-            background-color: $red;
-        }
-    }
+  img {
+    position: relative;
+    top: 50%;
+    width: 1.6em;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
 }
