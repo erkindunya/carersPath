@@ -165,7 +165,7 @@ module.exports = reloadCSS;
         module.hot.dispose(reloadCSS);
         module.hot.accept(reloadCSS);
       
-},{"./..\\images\\close-up-arrow.png":45,"_css_loader":30}],40:[function(require,module,exports) {
+},{"./..\\images\\close-up-arrow.png":45,"_css_loader":30}],61:[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 
@@ -335,7 +335,7 @@ function hmrAccept(bundle, id) {
     return hmrAccept(global.parcelRequire, id);
   });
 }
-},{}],46:[function(require,module,exports) {
+},{}],62:[function(require,module,exports) {
 var getBundleURL = require('./bundle-url').getBundleURL;
 
 function loadBundlesLazy(bundles) {
@@ -417,5 +417,5 @@ LazyPromise.prototype.catch = function (onError) {
   return this.promise.catch(onError);
 };
 },{"./bundle-url":33}],0:[function(require,module,exports) {
-var b=require(46);b.load([["close-up-arrow.3e506a71.png",45]]);
-},{}]},{},[40,0], null)
+var b=require(62);b.load([["close-up-arrow.3e506a71.png",45]]);
+},{}]},{},[61,0], null)

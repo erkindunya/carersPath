@@ -1,6 +1,7 @@
 $dark-blue: #00263a;
 $light-blue: #008195;
 $grey: #4d4d4d;
+$light-grey: #E4E4E4;
 $white: #ffffff;
 $red: #e40520;
 
@@ -148,6 +149,33 @@ header {
   }
 }
 
+footer {
+  background-color: $light-grey;
+  margin-top: 5em;
+  padding: 4em 0;
+
+  h4 {
+    font-weight: normal;
+    color: $grey;
+    font-size: 1.8em;
+    margin-bottom: 2em;
+  }
+  p {
+    font-size: 1.2em;
+  }
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    li a {
+      color: $grey;
+      font-size: 1.2em;
+      padding-bottom: 2em;
+      display: block;
+    }
+  }
+}
+
 .light-banner {
   position: relative;
   background-color: $light-blue;
@@ -266,6 +294,33 @@ header {
         content: url('../images/close-up-arrow.png'); // causes error with parcel compiler, not sure why, still runs
         margin-left: 0.5em;
       }
+    }
+  }
+}
+
+.vision {
+  margin-top: 10em;
+  margin-bottom: 8em;
+}
+
+.vision-description {
+  margin-bottom: 3em;
+}
+
+.vision-box {
+  h3 {
+    margin-top: 1em;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    li {
+      border-top: 1px solid $grey;
+      padding: 1em 0;
+      margin: 1em 0;
+      font-size: 1.2em;
     }
   }
 }
