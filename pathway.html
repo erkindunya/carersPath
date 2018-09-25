@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HR Career Pathways</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="./styles/main.scss">
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', { packages: ["orgchart"] });
+        google.charts.setOnLoadCallback(drawChart1);
+        google.charts.setOnLoadCallback(drawChart2);
+        google.charts.setOnLoadCallback(drawChart3);
+        google.charts.setOnLoadCallback(drawChart0);
+
+        function drawChart0() {
+            drawChart([
+                ['Group Financial Controller', '', ''],
+                ['Tax Director', 'Group Financial Controller', ''],
+                ['Corporate Specialist', 'Tax Director', ''],
+                ['Tax Manager', 'Tax Director', ''],
+                ['VAT Specialist', 'Tax Director', ''],
+                ['Tax Assistant', 'Tax Manager', ''],
+                ['Corporate Tax Preparer', 'Tax Manager', ''],
+                ['VAT Preparer', 'Tax Manager', ''],
+                ['Head of Group Treasury', 'Group Financial Controller', ''],
+                ['Treasury Manager', 'Head of Group Treasury', ''],
+                ['Treasury Accountant', 'Treasury Manager', ''],
+                ['Head of Financial Planning and Analytics', 'Group Financial Controller', ''],
+                ['Head of Group Finance', 'Group Financial Controller', ''],
+                ['Head of Finance Transformation', 'Group Financial Controller', ''],
+                ['Group Financial Accouting Manager', 'Head of Group Finance', ''],
+                ['Group Reporting Manager', 'Head of Group Finance', ''],
+                ['Systems Accountant', 'Head of Group Finance', ''],
+                ['Group Reporting Accountant', 'Group Reporting Manager', ''],
+                ['Financial Analyst', 'Group Reporting Accountant', ''],
+                ['Reporting Accountant', 'Group Reporting Accountant', ''],
+                ['Group Financial Accountant', 'Group Reporting Accountant', '']
+            ], document.getElementById('chart0'));
+        }
+
+        function drawChart1() {
+            drawChart([
+                ['Tax Director', '', ''],
+                ['Corporate Specialist', 'Tax Director', ''],
+                ['Tax Manager', 'Tax Director', ''],
+                ['VAT Specialist', 'Tax Director', ''],
+                ['Tax Assistant', 'Tax Manager', ''],
+                ['Corporate Tax Preparer', 'Tax Manager', ''],
+                ['VAT Preparer', 'Tax Manager', '']
+            ], document.getElementById('chart1'));
+        }
+        function drawChart2() {
+            drawChart([
+                ['Head of Group Treasury', '', ''],
+                ['Treasury Manager', 'Head of Group Treasury', ''],
+                ['Treasury Accountant', 'Treasury Manager', '']
+            ], document.getElementById('chart2'));
+        }
+        function drawChart3() {
+            drawChart([
+                ['Head of Financial Planning and Analytics', '', ''],
+                ['Head of Group Finance', '', ''],
+                ['Head of Finance Transformation', '', ''],
+                ['Group Financial Accouting Manager', 'Head of Group Finance', ''],
+                ['Group Reporting Manager', 'Head of Group Finance', ''],
+                ['Systems Accountant', 'Head of Group Finance', ''],
+                ['Group Reporting Accountant', 'Group Reporting Manager', ''],
+                ['Financial Analyst', 'Group Reporting Accountant', ''],
+                ['Reporting Accountant', 'Group Reporting Accountant', ''],
+                ['Group Financial Accountant', 'Group Reporting Accountant', '']
+            ], document.getElementById('chart3'));
+        }
+        function drawChart(rows, element) {
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'Name');
+            data.addColumn('string', 'Manager');
+            data.addColumn('string', 'ToolTip');
+
+            // For each orgchart box, provide the name, manager, and tooltip to show.
+            data.addRows(rows);
+
+            // Create the chart.
+            var chart = new google.visualization.OrgChart(element);
+            // Draw the chart, setting the allowHtml option to true for the tooltips.
+            chart.draw(data, { allowHtml: false, nodeClass: 'chart-node' });
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="header container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <img src="./images/logo.png" alt="Kier">
+                </div>
+                <div class="col-lg-8 text-right">
+                    <a href="#" class="js-toggle-subnav">Career Pathways</a>
+                    <a href="#">Career Stories</a>
+                    <div class="search">
+                        <input type="text" name="search-input" id="search-input" placeholder="Search a role">
+                        <img src="./images/search.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="subnav">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <a href="#" class="row">
+                            <div class="col-sm-3">
+                                <img src="./images/operational-finance.png" alt="Operational Finance">
+                            </div>
+                            <div class="col-sm-9">
+                                Operational Finance
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4">
+                        <a href="#" class="row">
+                            <div class="col-sm-3">
+                                <img src="./images/fssc.png" alt="FSSC">
+                            </div>
+                            <div class="col-sm-9">
+                                Finance Shared Service Centre (FSSC)
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4">
+                        <a href="#" class="row">
+                            <div class="col-sm-3">
+                                <img src="./images/group-finance.png" alt="Group Finance">
+                            </div>
+                            <div class="col-sm-9">
+                                Group Finance and Technical Specialisms
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="row text-right">
+                    <div class="col">
+                        <a href="#" class="close-subnav js-close-subnav">Close navigation</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="breadcrumbs">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        Group Finance and Technical Specialisms
+                    </div>
+                </div>
+            </div>
+        </section>
+    </header>
+    <section class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-6">
+                <h1>Group Finance and Technical Specialisms</h1>
+                <p>Responsible for setting the financial strategy, scanning the horizon and ensuring that the business
+                    has a consistent and sound medium-term financial plan. </p>
+
+                <ul class="pathway-sections list-unstyled row">
+                    <li class="col-sm-6"><span>Group consolidation</span></li>
+                    <li class="col-sm-6"><span>Comms and training</span></li>
+                    <li class="col-sm-6"><span>Corporate reporting</span></li>
+                    <li class="col-sm-6"><span>Finance timetable, guideline and recharges</span></li>
+                    <li class="col-sm-6"><span>Forecasts</span></li>
+                    <li class="col-sm-6"><span>Audit management</span></li>
+                    <li class="col-sm-6"><span>Finance policy &amp; procedure</span></li>
+                    <li class="col-sm-6"><span>Statutory reporting</span></li>
+                    <li class="col-sm-6"><span>Overhead base</span></li>
+                    <li class="col-sm-6"><span>Tax, treasury, audit, insurance systems</span></li>
+                    <li class="col-sm-6"><span>3rd party relationship management</span></li>
+                    <li class="col-sm-6"><span>BOOST</span></li>
+                    <li class="col-sm-6"><span>Controls and compliance</span></li>
+                    <li class="col-sm-6"><span>Risk management</span></li>
+                    <li class="col-sm-6"><span>Technical updates</span></li>
+                </ul>
+            </div>
+            <div class="col-lg-4 col-md-6 text-center">
+                <img src="./images/group-finance-large.png">
+            </div>
+        </div>
+    </section>
+    <section class="charts container-fluid">
+        <div class="row">
+                <div class="col">
+                    <div id="chart0" class="chart-section"></div>
+                </div>
+            </div>
+        <div class="row">
+            <div class="col">
+                <div id="chart1" class="chart-section"></div>
+            </div>
+            <div class="col">
+                <div id="chart2" class="chart-section"></div>
+            </div>
+            <div class="col">
+                <div id="chart3" class="chart-section"></div>
+            </div>
+        </div>
+    </section>
+    <section class="light-banner">
+        <div class="container">
+            <div class="row">
+                <div class="col text-center">
+                    <h2>Explore a career pathway job family</h2>
+                </div>
+            </div>
+            <div class="d-flex">
+                <div class="pathway-box p-2">
+                    <img src="./images/operational-finance.png" class="pathway-box-image">
+                    <h3>Operational Finance</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In aliquid corrupti aliquam iure ab sit
+                        exercitationem
+                        consequatur nobis libero suscipit? Tempora officia quo exercitationem perferendis molestias
+                        modi
+                        repellendus consequatur voluptatum.</p>
+                    <div class="row pathway-box-buttons">
+                        <div class="col">
+                            <a href="#" class="btn btn-rounded">Explore</a>
+                        </div>
+                        <div class="col text-right">
+                            <a href="#" class="btn btn-primary">+</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="pathway-box p-2">
+                    <img src="./images/fssc.png" class="pathway-box-image">
+                    <h3>Finance Shared Service Centre (FSSC)</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea labore aperiam quo dolorum
+                        quibusdam? Officiis
+                        cumque, laborum architecto repellat voluptate earum iusto modi consequuntur impedit odit soluta
+                        tenetur
+                        repudiandae eos.</p>
+                    <div class="row pathway-box-buttons">
+                        <div class="col">
+                            <a href="#" class="btn btn-rounded">Explore</a>
+                        </div>
+                        <div class="col text-right">
+                            <a href="#" class="btn btn-primary">+</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="pathway-box p-2">
+                    <img src="./images/group-finance.png" class="pathway-box-image">
+                    <h3>Finance Shared Service Centre (FSSC)</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea labore aperiam quo dolorum
+                        quibusdam? Officiis
+                        cumque, laborum architecto repellat voluptate earum iusto modi consequuntur impedit odit soluta
+                        tenetur
+                        repudiandae eos.</p>
+                    <div class="row pathway-box-buttons">
+                        <div class="col">
+                            <a href="#" class="btn btn-rounded">Explore</a>
+                        </div>
+                        <div class="col text-right">
+                            <a href="#" class="btn btn-primary">+</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <h4>Career Pathways</h4>
+                    <ul>
+                        <li><a href="#">Operational Finance</a></li>
+                        <li><a href="#">Financial Shared Service Centre FSSC</a></li>
+                        <li><a href="#">Group Finance and Technical Specialisms</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4>Career Stories</h4>
+                    <ul>
+                        <li><a href="">Lee Woodall</a></li>
+                        <li><a href="">David Hodson</a></li>
+                        <li><a href="">Ross Gallagher</a></li>
+                        <li><a href="">Emma Tarrant</a></li>
+                        <li><a href="">Ian Chapman</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4>Lorem ipsum</h4>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus quidem laudantium, fugiat
+                        animi blanditiis ut, quod maxime, modi error soluta numquam asperiores tempore! Eos, nostrum?
+                        Quo, dicta. Voluptas, ab voluptate?</p>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4>Lorem ipsum</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor nam inventore tenetur ipsam, quam
+                        in id consequuntur quasi ex est a pariatur cumque minima accusamus harum! Accusamus quas nisi
+                        hic?</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="./scripts/main.ts"></script>
+</body>
+
+</html>

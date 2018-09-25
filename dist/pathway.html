@@ -8,7 +8,48 @@
     <title>HR Career Pathways</title>
     <link rel="stylesheet" href="/bootstrap.eb65e2bd.css">
     <link rel="stylesheet" href="/main.48b3db1d.css">
-<script src="/bootstrap.eb65e2bd.js"></script><script src="/main.48b3db1d.js"></script></head>
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script>google.charts.load('current', {
+  packages: ["orgchart"]
+});
+google.charts.setOnLoadCallback(drawChart1);
+google.charts.setOnLoadCallback(drawChart2);
+google.charts.setOnLoadCallback(drawChart3);
+google.charts.setOnLoadCallback(drawChart0);
+
+function drawChart0() {
+  drawChart([['Group Financial Controller', '', ''], ['Tax Director', 'Group Financial Controller', ''], ['Corporate Specialist', 'Tax Director', ''], ['Tax Manager', 'Tax Director', ''], ['VAT Specialist', 'Tax Director', ''], ['Tax Assistant', 'Tax Manager', ''], ['Corporate Tax Preparer', 'Tax Manager', ''], ['VAT Preparer', 'Tax Manager', ''], ['Head of Group Treasury', 'Group Financial Controller', ''], ['Treasury Manager', 'Head of Group Treasury', ''], ['Treasury Accountant', 'Treasury Manager', ''], ['Head of Financial Planning and Analytics', 'Group Financial Controller', ''], ['Head of Group Finance', 'Group Financial Controller', ''], ['Head of Finance Transformation', 'Group Financial Controller', ''], ['Group Financial Accouting Manager', 'Head of Group Finance', ''], ['Group Reporting Manager', 'Head of Group Finance', ''], ['Systems Accountant', 'Head of Group Finance', ''], ['Group Reporting Accountant', 'Group Reporting Manager', ''], ['Financial Analyst', 'Group Reporting Accountant', ''], ['Reporting Accountant', 'Group Reporting Accountant', ''], ['Group Financial Accountant', 'Group Reporting Accountant', '']], document.getElementById('chart0'));
+}
+
+function drawChart1() {
+  drawChart([['Tax Director', '', ''], ['Corporate Specialist', 'Tax Director', ''], ['Tax Manager', 'Tax Director', ''], ['VAT Specialist', 'Tax Director', ''], ['Tax Assistant', 'Tax Manager', ''], ['Corporate Tax Preparer', 'Tax Manager', ''], ['VAT Preparer', 'Tax Manager', '']], document.getElementById('chart1'));
+}
+
+function drawChart2() {
+  drawChart([['Head of Group Treasury', '', ''], ['Treasury Manager', 'Head of Group Treasury', ''], ['Treasury Accountant', 'Treasury Manager', '']], document.getElementById('chart2'));
+}
+
+function drawChart3() {
+  drawChart([['Head of Financial Planning and Analytics', '', ''], ['Head of Group Finance', '', ''], ['Head of Finance Transformation', '', ''], ['Group Financial Accouting Manager', 'Head of Group Finance', ''], ['Group Reporting Manager', 'Head of Group Finance', ''], ['Systems Accountant', 'Head of Group Finance', ''], ['Group Reporting Accountant', 'Group Reporting Manager', ''], ['Financial Analyst', 'Group Reporting Accountant', ''], ['Reporting Accountant', 'Group Reporting Accountant', ''], ['Group Financial Accountant', 'Group Reporting Accountant', '']], document.getElementById('chart3'));
+}
+
+function drawChart(rows, element) {
+  var data = new google.visualization.DataTable();
+  data.addColumn('string', 'Name');
+  data.addColumn('string', 'Manager');
+  data.addColumn('string', 'ToolTip'); // For each orgchart box, provide the name, manager, and tooltip to show.
+
+  data.addRows(rows); // Create the chart.
+
+  var chart = new google.visualization.OrgChart(element); // Draw the chart, setting the allowHtml option to true for the tooltips.
+
+  chart.draw(data, {
+    allowHtml: false,
+    nodeClass: 'chart-node'
+  });
+}</script>
+</head>
 
 <body>
     <header>
@@ -69,34 +110,66 @@
                 </div>
             </div>
         </section>
+
+        <section class="breadcrumbs">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        Group Finance and Technical Specialisms
+                    </div>
+                </div>
+            </div>
+        </section>
     </header>
     <section class="container">
-        <div class="row align-items-center">
-            <div class="col">
-                <h1>Finance Career Pathways</h1>
-                <p class="subtitle">We strive to be a dynamic, outward facing, and forward looking function with the
-                    development of our people
-                    at its core.</p>
-                <p>Use this tool to explore your potential career pathways within Kier. We aim to support and empower
-                    our people
-                    to prospect the range of finance opportunities across Kier, to build their professional skills and
-                    to
-                    progress their careers. We do this by providing stretching, interesting work, professional
-                    accreditation,
-                    career development support, knowledge sharing and access to internal and external networks.</p>
-                <p>We value the diversity of backgrounds and experience people bring to the function and are building
-                    an open,
-                    inclusive finance community.</p>
+        <div class="row">
+            <div class="col-lg-8 col-md-6">
+                <h1>Group Finance and Technical Specialisms</h1>
+                <p>Responsible for setting the financial strategy, scanning the horizon and ensuring that the business
+                    has a consistent and sound medium-term financial plan. </p>
+
+                <ul class="pathway-sections list-unstyled row">
+                    <li class="col-sm-6"><span>Group consolidation</span></li>
+                    <li class="col-sm-6"><span>Comms and training</span></li>
+                    <li class="col-sm-6"><span>Corporate reporting</span></li>
+                    <li class="col-sm-6"><span>Finance timetable, guideline and recharges</span></li>
+                    <li class="col-sm-6"><span>Forecasts</span></li>
+                    <li class="col-sm-6"><span>Audit management</span></li>
+                    <li class="col-sm-6"><span>Finance policy &amp; procedure</span></li>
+                    <li class="col-sm-6"><span>Statutory reporting</span></li>
+                    <li class="col-sm-6"><span>Overhead base</span></li>
+                    <li class="col-sm-6"><span>Tax, treasury, audit, insurance systems</span></li>
+                    <li class="col-sm-6"><span>3rd party relationship management</span></li>
+                    <li class="col-sm-6"><span>BOOST</span></li>
+                    <li class="col-sm-6"><span>Controls and compliance</span></li>
+                    <li class="col-sm-6"><span>Risk management</span></li>
+                    <li class="col-sm-6"><span>Technical updates</span></li>
+                </ul>
             </div>
-            <div class="col text-center">
-                <img src="/pathways.38f4a9c9.png">
+            <div class="col-lg-4 col-md-6 text-center">
+                <img src="/group-finance-large.e839c528.png">
+            </div>
+        </div>
+    </section>
+    <section class="charts container-fluid">
+        <div class="row">
+                <div class="col">
+                    <div id="chart0" class="chart-section"></div>
+                </div>
+            </div>
+        <div class="row">
+            <div class="col">
+                <div id="chart1" class="chart-section"></div>
+            </div>
+            <div class="col">
+                <div id="chart2" class="chart-section"></div>
+            </div>
+            <div class="col">
+                <div id="chart3" class="chart-section"></div>
             </div>
         </div>
     </section>
     <section class="light-banner">
-        <div class="arrow">
-            <img src="/down-arrow.919b3971.png">
-        </div>
         <div class="container">
             <div class="row">
                 <div class="col text-center">
@@ -155,76 +228,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-    <section class="dark-banner">
-        <div class="container">
-            <div class="d-flex align-items-center">
-                <div class="flex-even">
-                    <h3>Career Stories</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero, nihil, amet laborum
-                        perspiciatis obcaecati
-                        tenetur nemo, tempore maxime voluptate odio cupiditate! Ab, modi esse! Quae ex provident eius.
-                        Facere,
-                        expedita.
-                    </p>
-
-                    <div class="row pathway-box-buttons">
-                        <div class="col">
-                            <a href="#" class="btn btn-rounded">Explore</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="flex-even text-right">
-                    <img class="explore-our-stories" src="/explore-stories.1590b07b.png" alt="This way to explore our stories">
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="container vision">
-        <div class="row vision-description">
-            <div class="col-lg-6">
-                <h2>Our Finance Vision</h2>
-                <p class="subtitle">Outstanding people, driving and protecting value through excellent customer service
-                    and strong financial stewardship. </p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-3 col-md-6 vision-box">
-                <img src="/people.22a32159.png" alt="People">
-                <h3>People</h3>
-                <ul>
-                    <li>Work as one team, recognising and rewarding behaviours.</li>
-                    <li>Attract and invest in outstanding people through training and development.</li>
-                    <li>Champion diversity.</li>
-                </ul>
-            </div>
-            <div class="col-lg-3 col-md-6 vision-box">
-                <img src="/value.2dcb06cf.png" alt="Value">
-                <h3>Value</h3>
-                <ul>
-                    <li>We help drive business performance and are a catalyst for improvement.</li>
-                    <li>We deliver value for the business, adding value through commercial decision support.</li>
-                </ul>
-            </div>
-            <div class="col-lg-3 col-md-6 vision-box">
-                <img src="/service.173ca000.png" alt="Service">
-                <h3>Service</h3>
-                <ul>
-                    <li>We build strong relationships with our customers to understand their needs and provide an
-                        excellent service.</li>
-                    <li>Our information is trusted and timely.</li>
-                </ul>
-            </div>
-            <div class="col-lg-3 col-md-6 vision-box">
-                <img src="/control.a84e36cf.png" alt="Control">
-                <h3>Control</h3>
-                <ul>
-                    <li>We focus on compliance and forward-looking insight.</li>
-                    <li>We ensure strong financial controls for sustainable growth.</li>
-                    <li>We have clear accountabilities and make decisions at pace.</li>
-                </ul>
             </div>
         </div>
     </section>
