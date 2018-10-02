@@ -11,6 +11,7 @@
 </head>
 
 <body>
+    
     <header>
         <div class="header container">
             <div class="row">
@@ -21,12 +22,29 @@
                     <div class="d-flex flex-column flex-md-row justify-content-end">
 
                         <div class="d-flex link-container order-1 order-md-0 justify-content-around">
-                            <a href="#" class="subnav-link js-toggle-subnav">Career Pathways</a>
-                            <a href="#">Career Stories</a>
+                            <a href="#" class="nav-link subnav-link js-toggle-subnav">Career Pathways</a>
+                            <a href="#" class="nav-link">Career Stories</a>
                         </div>
                         <div class="search order-0 order-md-1">
                             <input type="text" name="search-input" id="search-input" placeholder="Search a role">
                             <img src="./images/search.png">
+
+                            <div class="sub-search">
+                                <a href="#" class="nav-search-result">
+                                    <img src="./images/group-finance.png" />
+                                    <span>Group Financial Accountant</span>
+                                </a>
+                                
+                                <a href="#" class="nav-search-result">
+                                    <img src="./images/group-finance.png" />
+                                    <span>Group Financial Accountant</span>
+                                </a>
+                                
+                                <a href="#" class="nav-search-result">
+                                    <img src="./images/group-finance.png" />
+                                    <span>Group Financial Accountant</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -41,7 +59,7 @@
                             <div class="col-sm-3 align-self-center">
                                 <img src="./images/operational-finance.png" alt="Operational Finance">
                             </div>
-                            <div class="col-sm-9 align-self-center">
+                            <div class="col-sm-9 align-self-center text-left">
                                 Operational Finance
                             </div>
                         </a>
@@ -51,7 +69,7 @@
                             <div class="col-sm-3 align-self-center">
                                 <img src="./images/fssc.png" alt="FSSC">
                             </div>
-                            <div class="col-sm-9 align-self-center">
+                            <div class="col-sm-9 align-self-center text-left">
                                 Finance Shared Service Centre (FSSC)
                             </div>
                         </a>
@@ -61,7 +79,7 @@
                             <div class="col-sm-3 align-self-center">
                                 <img src="./images/group-finance.png" alt="Group Finance">
                             </div>
-                            <div class="col-sm-9 align-self-center">
+                            <div class="col-sm-9 align-self-center text-left">
                                 Group Finance and Technical Specialisms
                             </div>
                         </a>
@@ -278,10 +296,35 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="sun-container">
-                        <div class="inner-circle"></div>
+                        <div class="outer-circle" >
+                            <div class="inner-circle"></div>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-6"></div>
+                <div class="col-md-6">
+                    <img class="flag-image" src="./images/flag-success.png" />
+                </div>
+            </div>
+        </div>
+
+        <div class="container next-story">
+            <div class="row">
+                <div class="col-12">
+                    <h3>Explore the next career story</h3>
+                </div>
+                <div class="col-lg-8">
+                
+                    <div class="d-flex story-item flex-column flex-lg-row">
+                        <div class="text-container flex-fill">
+                            <h2>Lee Woodall</h2>
+                            <span class="subheading">Finance Director - Environmental</span>
+                            <div class="btn btn-rounded">Explore</div>
+                        </div>
+                        <div class="img-container">
+                            <img src="./images/temp-person.png">
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -289,7 +332,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-md-6">
-                    <h4>Career Pathways</h4>
+                    <h4>Career Pathways</h4> 
                     <ul>
                         <li>
                             <a href="#">Operational Finance</a>
